@@ -32,7 +32,12 @@ const PostCard = ({ post, refreshPosts }: Props) => {
         {post.image && (
           <Box
             component="img"
-            src={`http://localhost:5000${post.image}`}
+            src={
+              post.image?.startsWith("http")
+                ? post.image
+                : `https://mini-social-backend.onrender.com${post.image}`
+            }
+
             alt="post"
             sx={{
               width: "100%",
