@@ -35,7 +35,7 @@ const PostCard = ({ post, refreshPosts }: Props) => {
             src={
               post.image?.startsWith("http")
                 ? post.image
-                : `https://mini-social-backend.onrender.com${post.image}`
+                : `https://mini-social-postapps.onrender.com${post.image}`
             }
 
             alt="post"
